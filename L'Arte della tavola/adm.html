@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuários</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+    <div class="container-login100" style="background-image: url('fundo.png');">
+    <div class="container">
+        <h1>Controle de Usuários</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-usuarios">
+                <tr data-usuario-id="1">
+                    <td>1</td>
+                    <td>João Silva</td>
+                    <td>joao@email.com</td>
+                    <td>
+                        <button class="btn-info" data-usuario-id="1">Ver Informações</button>
+                        <button class="btn-denuncias" data-usuario-id="1">Ver Denúncias</button>
+                    </td>
+                </tr>
+                <tr data-usuario-id="2">
+                    <td>2</td>
+                    <td>Maria Souza</td>
+                    <td>maria@email.com</td>
+                    <td>
+                        <button class="btn-info" data-usuario-id="2">Ver Informações</button>
+                        <button class="btn-denuncias" data-usuario-id="2">Ver Denúncias</button>
+                    </td>
+                </tr>
+                <tr data-usuario-id="3">
+                    <td>3</td>
+                    <td>Carlos Pereira</td>
+                    <td>carlos@email.com</td>
+                    <td>
+                        <button class="btn-info" data-usuario-id="3">Ver Informações</button>
+                        <button class="btn-denuncias" data-usuario-id="3">Ver Denúncias</button>
+                    </td>
+                </tr>
+                <tr data-usuario-id="4">
+                    <td>4</td>
+                    <td>Fernanda Lima</td>
+                    <td>fernanda@email.com</td>
+                    <td>
+                        <button class="btn-info" data-usuario-id="4">Ver Informações</button>
+                        <button class="btn-denuncias" data-usuario-id="4">Ver Denúncias</button>
+                    </td>
+                </tr>
+                <tr data-usuario-id="5">
+                    <td>5</td>
+                    <td>Lucas Araújo</td>
+                    <td>lucas@email.com</td>
+                    <td>
+                        <button class="btn-info" data-usuario-id="5">Ver Informações</button>
+                        <button class="btn-denuncias" data-usuario-id="5">Ver Denúncias</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Modal para exibir as informações do usuário -->
+        <div id="modal-info-usuario" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Informações do Usuário</h2>
+                <p><strong>ID:</strong> <span id="usuario-id"></span></p>
+                <p><strong>Nome:</strong> <span id="usuario-nome"></span></p>
+                <p><strong>Email:</strong> <span id="usuario-email"></span></p>
+            </div>
+        </div>
+
+        <!-- Modal para exibir as denúncias do usuário -->
+        <div id="modal-denuncias" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Denúncias Feitas pelo Usuário</h2>
+                <ul id="lista-denuncias"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="adm.js"></script>
+   
+</body>
+</html>
+
